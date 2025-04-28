@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bar {
+    width: 100%;
+    height: 1.9rem;
+    margin: 0.5rem 0;
+    background-color: #d8e3ea;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .bar:hover,
+  .bar:focus {
+    background-color: #778da9;
+    transform: scale(1.02);
+
+  }
+  
+  .selected {
+    background-color: #e9c46a;
+    transform: scale(1.03);
+  }
+
+  .selected:hover,
+  .selected:focus
+  {
+    background-color: #d49e3c;
+    transform: scale(1.05);
+  }
+
+  .selectionLabel {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+  

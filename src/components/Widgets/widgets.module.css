@@ -1,0 +1,28 @@
+.widgetsContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 1rem;
+    margin: 0 auto;
+    border: 2px solid #e9c46a;
+    border-radius: 0.6rem;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+
+/* Tablet and above (2 columns layout) */
+@media (min-width: 768px) {
+    .widgetsContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets and up */
+    }
+}
+
+/* Tablet and above (2 columns layout) */
+@media (min-width: 1024px) {
+    .widgetsContainer {
+        gap: 5rem;
+        padding: 2.5rem;
+    }
+}

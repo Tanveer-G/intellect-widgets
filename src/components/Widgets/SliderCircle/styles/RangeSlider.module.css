@@ -1,0 +1,112 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 3.5rem;
+    margin-bottom: 1.1rem;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #bbddb4;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+    --progress: 0%;
+  }
+  
+  .slider::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(
+      to right,
+      #e9c46a var(--progress),
+      transparent var(--progress)
+    );
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 21px;
+    height: 21px;
+    margin-top: -6px;
+    border-radius: 50%;
+    background: #e9c46a;
+    border: 4px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .slider::-webkit-slider-thumb:hover,
+  .slider:focus::-webkit-slider-thumb {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px rgba(79, 168, 61, 0.3);
+  }
+  
+  .slider::-moz-range-track {
+    height: 8px;
+    border-radius: 4px;
+    background: #bbddb4;
+  }
+  
+  .slider::-moz-range-progress {
+    height: 8px;
+    border-radius: 4px;
+    background: #e9c46a;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #e9c46a;
+    border: 4px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .slider::-moz-range-thumb:hover,
+  .slider:focus::-moz-range-thumb {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px rgba(233, 196, 106, 0.3)
+    ;
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(-0.5rem);
+    background: #e9c46a;
+    border: 1px solid #e9c46a;
+    border-radius: 4px;
+    padding: 0.25em 0.6em;
+    font-family: system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: -0.5px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+    min-width: 1.75em;
+    text-align: center;
+  }
+  
+
+
+/* Tablet and above (2 columns layout) */
+@media (min-width: 768px) {
+  .container {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Tablet and above (2 columns layout) */
+@media (min-width: 1024px) {
+  .container {
+    margin-bottom: 1.1rem;
+
+  }
+}

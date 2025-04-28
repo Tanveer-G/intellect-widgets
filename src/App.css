@@ -1,0 +1,19 @@
+.layout {
+padding: 0 1rem;
+margin: 0 auto;
+overflow-x: hidden;
+}
+
+/* Tablet and above (2 columns layout) */
+@media (min-width: 768px) {
+  .layout {
+    padding: 0 2.5rem;
+  }
+}
+
+/* Desktop and above (2 columns layout) */
+@media (min-width: 1024px) {
+  .layout {
+    padding: 1rem;
+  }
+}
