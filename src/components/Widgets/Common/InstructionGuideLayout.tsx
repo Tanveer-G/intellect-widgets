@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from './styles/instructionGuide.module.css';
+import styles from './styles/InstructionGuide.module.css';
 
 
 interface Props {
