@@ -26,5 +26,5 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src", "./jest.setup.ts", "src/**/*", "./src/**/*.ts", "./src/**/*.tsx" ],
+  "include": ["src", "test", "src/test/jest.setup.ts", "src/**/*", "./src/**/*.ts", "./src/**/*.tsx" ],
 }
