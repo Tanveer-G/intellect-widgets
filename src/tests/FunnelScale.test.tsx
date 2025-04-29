@@ -41,15 +41,13 @@ describe('funnelScaleUtils', () => {
     it('returns a level when clicked on a bar element', () => {
       const fakeLabel = document.createElement('label');
       fakeLabel.setAttribute('data-level', '4');
-      // Correctly typed event
-      const fakeEvent = { target: fakeLabel } as MouseEvent<HTMLElement>;
+      const fakeEvent = { target: fakeLabel } as Partial<MouseEvent> as MouseEvent;
       expect(getLevelFromEvent(fakeEvent)).toBe(4);
     });
 
     it('returns undefined if no data-level', () => {
       const div = document.createElement('div');
-      // Correctly typed event
-      const fakeEvent = { target: div } as MouseEvent<HTMLElement>;
+      const fakeEvent = { target: div } as Partial<MouseEvent> as MouseEvent;
       expect(getLevelFromEvent(fakeEvent)).toBeUndefined();
     });
   });
