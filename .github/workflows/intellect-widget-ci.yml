@@ -1,0 +1,43 @@
+name: Intellect Widget - CI (Build, Test, Lint)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20'  # Easily update Node version from here
+
+jobs:
+  ci:
+    name: Lint, Test, and Build
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js and enable dependency caching
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'  # Automatically caches node_modules using package-lock.json
+
+      # Clean install project dependencies
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      # Run linter to ensure code quality
+      - name: 🧹 Run Linter
+        run: npm run lint  # Fails CI if linting issues are present
+
+      # Run unit tests in CI mode without watch, sequentially
+      - name: 🧪 Run Tests
+        run: npm test -- --ci --no-watch --runInBand
+
+      # Build the production-ready application
+      - name: 🏗️ Build App
+        run: npm run build
