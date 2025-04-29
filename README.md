@@ -2,6 +2,8 @@
 
 &#x20;&#x20;
 
+![CI](https://github.com/Tanveer-G/intellect-widgets/actions/workflows/intellect-widget-ci.yml/badge.svg)
+
 ![Home Screen or OpenGraph Image](./public/og.webp)
 
 **Intellect Widgets** provides two highly customizable, accessible React widgets:
@@ -162,17 +164,17 @@ function App() {
 - ``: Numeric clamp utility.
 - **Circle/range/funnel utilities** in `src/utils/` for geometry and mapping logic.
 
-## ✅ Tests & Quality (v2)
+  ## ✅ Tests & Quality
 
-- **Jest** & **React Testing Library** for unit and integration tests.
-- **axe-core** for accessibility checks.
-- **ESLint** + **Prettier** + **Husky** + **lint-staged** for linting & formatting.
+  - **Jest** & **React Testing Library** for unit and integration tests.
+  - **ESLint** + **Prettier** + **Husky** + **lint-staged** for linting & formatting.
+  - **axe-core** (v3) for accessibility checks.
 
-## ☁️ CI & Deployment (v2)
+  ## ☁️ CI & Deployment
 
-- **GitHub Actions** runs lint, type-check, build, and tests on every PR.
-- **Storybook** (optional) for live component demos.
-- Deploy to **Vercel** via CI hooks.
+  - **GitHub Actions**: CI pipeline that runs lint, type-checking, build, and tests on every PR to ensure code quality before merging.
+  - **Storybook** (optional v3): Live component demos for better visual understanding of widgets.
+  - **Vercel Deployment**: Continuous deployment to Vercel, automatically triggered by GitHub Actions on changes to the `main` branch.
 
 ## 🤝 Contributing
 
