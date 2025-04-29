@@ -96,11 +96,11 @@ export const CircleProgress: React.FC<CircleProgressProps> = React.memo(({
         />
         <circle
           className={styles.progressCircle}
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          strokeDasharray={circumference}
-          strokeDashoffset={dashOffset} // strokeDashoffset controls how much of the circle is "filled".
+          cx={size / 2} // Center X: horizontally center the circle in the SVG viewbox
+          cy={size / 2} // Center Y: vertically center the circle in the SVG viewbox
+          r={radius} // Radius of the circle, adjusted to account for stroke width
+          strokeDasharray={circumference} // Full length of the circle's stroke (used for calculating visible progress)
+          strokeDashoffset={dashOffset} // Hides part of the stroke to indicate unfilled progress (larger offset = less progress)        
         />
       </svg>
 

@@ -46,6 +46,7 @@ export const FunnelScale: React.FC = () => {
         className={styles.selectionLabel}
         aria-live="polite"
         htmlFor="funnel-scale"
+        data-testid={"output"}
       >
         {selectionText}
       </output>
@@ -72,6 +73,7 @@ export const FunnelScale: React.FC = () => {
               checked={isSelected}
               aria-labelledby={selectionId}
               aria-label={labelText}
+              data-testid={labelText}
               readOnly
             />
           </label>

@@ -59,6 +59,7 @@ export const RangeSlider: React.FC<RangeSliderProps> = ({
 
       <output
         id={tooltipId}
+        data-testid="tooltip" 
         aria-live="polite"
         className={styles.tooltip}
         style={{
